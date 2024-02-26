@@ -32,8 +32,8 @@ public class Merge : MonoBehaviour
                 GameObject vfx = Instantiate(vfxMerge, transform.position, Quaternion.identity) as GameObject;
 
                 Destroy(vfx, 1f);
-                GameManager.Instance.levels[GameManager.Instance.GetCurrentIndex()].gameObjects.Remove(gameObject);
-                GameManager.Instance.levels[GameManager.Instance.GetCurrentIndex()].gameObjects.Remove(Block2.gameObject);
+/*                GameManager.Instance.levels[GameManager.Instance.GetCurrentIndex()].gameObjects.Remove(gameObject);
+                GameManager.Instance.levels[GameManager.Instance.GetCurrentIndex()].gameObjects.Remove(Block2.gameObject);*/
                 Destroy(Block2.gameObject);
                 Destroy(gameObject);
                 /*                O.AddComponent<Rigidbody2D>();

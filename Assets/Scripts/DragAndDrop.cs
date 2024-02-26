@@ -9,7 +9,7 @@ public class DragAndDrop : MonoBehaviour
     private Vector2 _offset;
 
     public static bool mouseButtonReleased;
-
+                      
     private void Awake()
     {
         _dragging = false;

@@ -3,35 +3,20 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    public List<GameObject> gameObjects;
+    public List<Pan> pans;
 
-    // private void Awake()
-    // {
-    //     AddComponents();
-    // }
+    public void CheckPans()
+    {
+        foreach(Pan pan in pans)
+        {
+            if (!pan.isComponentFilled)
+            {
+                return;
+            }
+        }
 
-    // public void AddComponents()
-    // {
-    //     foreach (GameObject gameObject in GetAllChilds(gameObject))
-    //     {
-    //         if (!gameObject.activeSelf)
-    //         {
-    //             gameObject.SetActive(true);
-    //         }
-    //     }
-
-    //     AddEnemy();
-    // }
-
-    // public void AddEnemy()
-    // {
-    //     enemies.Clear();
-
-    //     foreach (Enemy enemy in GetComponentsInChildren<Enemy>())
-    //     {
-    //         enemies.Add(enemy);
-    //     }
-    // }
+        GameManager.Instance.CheckLevelUp();
+    }
 
     public static List<GameObject> GetAllChilds(GameObject Go)
     {
